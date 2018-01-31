@@ -1,0 +1,35 @@
+/*
+	Tyler Anthony
+	CPSC 2120-001
+	Assignment 4
+	April 17, 2016
+*/
+
+// Square.h
+// This class represents a square on the board.  It should remember the
+// state of a square (open, covered, or forbidden). If the square is covered, 
+// it should remember the number of the tile that covered it. It should have a 
+// class method to set/reset the characters for displaying the state 
+// (default is a period for open and hashtag for forbidden).
+
+#ifndef SQUARE_H
+#define SQUARE_H
+
+#include <iostream>
+#include <math>
+#include <stdio>
+
+using namespace std;
+
+class Square
+{
+	private:
+		bool isCovered;
+		char state;
+	public:
+		Square();
+		void set();
+		void reset();
+};
+
+#endif

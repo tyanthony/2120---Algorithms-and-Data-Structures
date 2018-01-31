@@ -1,0 +1,85 @@
+/*  
+	Tyler Anthony
+	CPSC 2120
+	Assignment 2
+	March 6, 2016
+*/
+
+// MegaTree.cpp
+
+#include "MegaTree.h"
+
+MegaTree::MegaTree() : root(nullptr), count(0)
+{}
+
+//  takes a name and a vector of k values and adds a suitable node to the tree.
+void MegaTree::insert( string name, double vals[] )
+{
+	if ( root == nullptr ){
+		root = new MegaNode(name, vals);
+		cout << "root: " << root->vals[0] << " " << root->vals[1] << endl;
+		count = 1;
+		return;
+	}
+	else{
+		cout << "root next: " << root->vals[0] << " " << root->vals[1] << endl;
+		insertNode( root, new MegaNode(name, vals) );
+	}
+}
+
+void MegaTree::insertNode(MegaNode *curr, MegaNode *newNode)
+{	
+	// reset count to go to look at correct spot in array
+	if (count > 2)
+		count = 1;
+	
+	// recursively move through the tree
+	cout << "count: " << count << endl;
+	cout << "curr: " << curr->vals[0] << " " << curr->vals[1] << endl;
+	cout << "newNode: " << newNode->vals[0] << " " << newNode->vals[1] << endl;
+	
+	if ( curr->vals[count-1] <= newNode->vals[count-1] ){
+		cout << "left" << endl;
+		if (curr->left == nullptr){
+			curr->left = newNode;
+			count++;
+		}
+		else{
+			insertNode(curr->left, newNode);
+		}
+	}
+	else{
+		cout << "right" << endl;
+		if (curr->right == nullptr){
+			curr->right = newNode;
+			count++;
+		}
+		else{
+			insertNode(curr->right, newNode);
+		}
+	}
+}
+
+// this utilizes a recursive procedure to print out the structure of the 
+// tree up to and including depth 3
+// FIX TO PRINT IN CORRECT FORMAT
+void MegaTree::preorder()
+{
+	if ( count == 0 ){
+		cout << "preorder() count is 0" << endl;
+	}
+	else {
+		preorder(root);
+		cout << endl;
+	}
+}
+
+void MegaTree::preorder(MegaNode * n)
+{
+	if ( n == nullptr )
+		return;
+	cout << "(" << n->vals[0] << "," << n->vals[1] << ")" << endl;
+	preorder(n->left);
+	preorder(n->right);
+}
+

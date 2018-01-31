@@ -1,0 +1,34 @@
+/*
+	Tyler Anthony
+	CPSC 2120-001
+	Assignment 4
+	April 17, 2016
+*/
+
+// Configuration.h
+// manipulates a board, and places tiles. All tiles are 1 square wide and a 
+// specified length
+
+#ifndef CONFIGURATION_H
+#define CONFIGURATION_H
+
+#include <iostream>
+#include <math>
+#include <stdio>
+
+using namespace std
+
+class Configuration
+{
+	private:
+		int rows, cols;
+		Square **board;
+		int countOfTiles;
+	public:
+		Configuration(int rr, int cc);
+		bool placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength);
+		void forbid(int r, int c);
+		void dumpToScreen() const;
+};
+
+#endif

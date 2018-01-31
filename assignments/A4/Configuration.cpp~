@@ -1,0 +1,25 @@
+/*
+	Tyler Anthony
+	CPSC 2120-001
+	Assignment 4
+	April 17, 2016
+*/
+
+// Configuration.cpp
+
+#include "Configuration.h"
+
+Configuration::Configuration(int rr, int cc)
+{
+	for (int i = 0; i < rr; i++){
+		for (int j = 0; j < cc; j++){
+			board[i][j] = new Square();
+		}
+	}
+}
+
+bool Configuration::placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength)
+{
+	
+}
+

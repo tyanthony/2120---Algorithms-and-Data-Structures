@@ -1,0 +1,35 @@
+/*  
+	Tyler Anthony
+	CPSC 2120
+	Assignment 2
+	March 6, 2016
+*/
+
+// MegaTree.h
+
+#ifndef MEGATREE_H
+#define MEGATREE_H
+
+#include <iostream>
+#include <cmath>
+#include <string>
+#include "MegaNode.h"
+
+using namespace std;
+
+class MegaTree
+{
+	private:
+		MegaNode *node;
+	public:
+		// sets the dimension
+		MegaTree(); 
+		// takes a name and vector of k values and adds a suitable node to the tree
+		void insert( string name, double vals[] );
+		// utilizes a recursive procedure to print the structure of the tree up to 	
+		// and including depth 3
+		void preorder();
+
+};
+
+#endif 

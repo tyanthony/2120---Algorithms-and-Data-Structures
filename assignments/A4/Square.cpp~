@@ -1,0 +1,25 @@
+/*
+	Tyler Anthony
+	CPSC 2120-001
+	Assignment 4
+	April 17, 2016
+*/
+
+// Square.cpp
+
+#include "Square.h"
+
+Square::Square() : isCovered(false), state('.'), count(0)
+{}
+
+void Square::set(char cover)
+{
+	state = cover;
+	isCovered = true;
+}
+
+void Square::reset()
+{
+	state = '.';
+}
+

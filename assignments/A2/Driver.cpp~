@@ -1,0 +1,39 @@
+/*  
+	Tyler Anthony
+	CPSC 2120
+	Assignment 2
+	March 6, 2016
+*/
+
+// Driver.cpp
+
+#include "MegaTree.h"
+
+int main()
+{
+	// ask user for number of points
+	cout << "How many points? ";
+	int numPoints;
+	cin >> numPoints;
+	cout << endl;
+	
+	MegaTree * root = new MegaTree;
+	
+	double vals[2];
+	// ask user for points in the plane
+	// add them to the 2D MegaTree using a blank name
+	for (int i = 0; i<numPoints; i++) {
+		// prompt user for values and store in x an y
+		cout << "Enter x and y values: ";
+		cin >> vals[0] >> vals[1];
+		
+		// add to the 2D MegaTree
+		root->insert("name", vals);
+	}
+	
+	// print out the structure of the tree
+	root->preorder();
+	
+
+	return 0;
+}

@@ -1,0 +1,44 @@
+uplft=(1,4) horz len=3
+uplft=(1,5) horz len=3
+uplft=(1,6) horz len=3
+uplft=(2,1) horz len=3
+uplft=(2,2) horz len=3
+uplft=(2,3) horz len=3
+uplft=(3,4) horz len=3
+uplft=(3,5) horz len=3
+uplft=(3,6) horz len=3
+uplft=(4,5) horz len=3
+uplft=(4,6) horz len=3
+uplft=(5,1) horz len=3
+uplft=(6,2) horz len=3
+uplft=(6,3) horz len=3
+uplft=(6,4) horz len=3
+uplft=(1,1) vert len=3
+uplft=(2,1) vert len=3
+uplft=(3,1) vert len=3
+uplft=(1,2) vert len=3
+uplft=(1,4) vert len=3
+uplft=(1,5) vert len=3
+uplft=(2,5) vert len=3
+uplft=(3,5) vert len=3
+uplft=(4,5) vert len=3
+uplft=(1,7) vert len=3
+uplft=(2,7) vert len=3
+uplft=(3,7) vert len=3
+uplft=(1,8) vert len=3
+uplft=(2,8) vert len=3
+uplft=(3,8) vert len=3
+uplft=(4,8) vert len=3
+--+-----
+--111+--
+--+-----
+-+++----
+---+-+--
++-----+-
+
+--+11178
+222--+78
+--+33378
+--++4449
+555+-+-9
++666--+9
